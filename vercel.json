@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "functions": {
-    "api/upload.js": {
-      "runtime": "nodejs22.x"
+  "builds": [
+    {
+      "src": "api/upload.js",
+      "use": "@vercel/node"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/api/upload",
