@@ -3,11 +3,7 @@ import sharp from "sharp";
 import multiparty from "multiparty";
 import fetch from "node-fetch";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+export const config = { api: { bodyParser: false } };
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = "santiagomontanes";
@@ -152,3 +148,5 @@ export async function POST(req) {
     });
   });
 }
+
+
