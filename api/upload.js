@@ -1,7 +1,6 @@
-module.exports = (req, res) => {
+export default function handler(req, res) {
   if (req.method === 'POST') {
-    res.status(200).json({ message: 'Archivo subido correctamente' });
-  } else {
-    res.status(405).json({ error: 'Método no permitido' });
+    return res.status(200).json({ message: 'Archivo subido correctamente' });
   }
-};
+  res.status(405).json({ error: 'Método no permitido' });
+}
